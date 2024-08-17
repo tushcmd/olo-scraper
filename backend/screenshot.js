@@ -10,4 +10,5 @@ async function takeScreenshot(url) {
 }
 
 const targetUrl = 'https://tushdev.co/';
+// const targetUrl = 'https://bot.sannysoft.com/';
 takeScreenshot(targetUrl);

@@ -31,8 +31,9 @@ async function scrapeWebpage(url: string) {
 }
 
 // const targetUrl = 'https://www.geeksforgeeks.org/immediately-invoked-function-expressions-iife-in-javascript/';
-const targetUrl = 'https://www.reddit.com/r/Headstarter/';
+//const targetUrl = 'https://www.reddit.com/r/Headstarter/';
 //'https://tushdev.co/';
+const targetUrl = 'https://old.reddit.com/';
 scrapeWebpage(targetUrl);
 
 
