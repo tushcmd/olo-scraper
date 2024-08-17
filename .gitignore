@@ -9,3 +9,6 @@
 .yarn/install-state.gz
 
 .history
+
+.env
+.env*
