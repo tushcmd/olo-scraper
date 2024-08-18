@@ -52,6 +52,8 @@ export async function scrapeWebpage(url: string) {
     const result = await collection.insertOne(data);
     console.log(`Data inserted with ID: ${result.insertedId}`);
 
+    return data; // Return the scraped data
+
     // // Close the browser
     // await browser.close();
 

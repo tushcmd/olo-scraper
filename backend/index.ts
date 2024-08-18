@@ -17,7 +17,7 @@ app.use(express.static('public'));
 
 app.post('/scrape', async (req: Request, res: Response) => {
     try {
-        const { url }: { url: string } = req.body; 
+        const { url }: { url: string } = req.body;
         // const { url } = req.body; // Extract the url from req.body
         if (!url) {
             return res.status(400).json({ error: "URL is required" });
@@ -25,7 +25,10 @@ app.post('/scrape', async (req: Request, res: Response) => {
 
         const data = await scrapeWebpage(url);
         res.json(data);
+        // await scrapeWebpage(url);
+        // res.json({ message: "Scraping completed successfully" });
     } catch (error: Error | any) {
+        console.error(error.message);
         res.status(500).json({ error: error.message });
     }
 });
