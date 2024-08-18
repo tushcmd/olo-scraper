@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { Link, Loader2 } from "lucide-react";
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 interface ScrapedData {
@@ -18,7 +19,7 @@ export default function ScrapeForm() {
         _event.preventDefault();
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:8080/scrape', {
+            const response = await fetch(`${API_URL}/scrape`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -70,14 +71,14 @@ export default function ScrapeForm() {
     // }
 
     return (
-        <section className='mt-16 w-full max-w-xl'>
+        <section className='w-full max-w-xl mt-16'>
             <img src="/scrape-spider.png" alt="scrape spider" />
             <div className='flex flex-col w-full gap-2'>
                 <form
-                    className='relative flex justify-center items-center'
+                    className='relative flex items-center justify-center'
                     onSubmit={handleSubmit}
                 >
-                    <div className='absolute left-0 my-2 ml-3 w-5'>
+                    <div className='absolute left-0 w-5 my-2 ml-3'>
                         <Link className="w-4 h-4" />
                     </div>
 
