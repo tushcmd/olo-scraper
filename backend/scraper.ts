@@ -2,6 +2,7 @@
 import puppeteer from "puppeteer";
 import { mongoDBURL } from "./config";
 import { MongoClient } from "mongodb";
+import logger from "./logger";
 
 
 export async function scrapeWebpage(url: string) {
@@ -19,7 +20,7 @@ export async function scrapeWebpage(url: string) {
 
 
     // Launch the browser  { headless: false } for debugging
-    browser = await puppeteer.launch({ headless: false });
+    browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
     // Navigate to the URL
@@ -50,7 +51,8 @@ export async function scrapeWebpage(url: string) {
       scrapedAt: new Date()
     };
     const result = await collection.insertOne(data);
-    console.log(`Data inserted with ID: ${result.insertedId}`);
+    // console.log(`Data inserted with ID: ${result.insertedId}`);
+    logger.info(`Data inserted with ID: ${result.insertedId}`)
 
     return data; // Return the scraped data
 
@@ -58,7 +60,8 @@ export async function scrapeWebpage(url: string) {
     // await browser.close();
 
   } catch (error: Error | any) {
-    console.error('Error scraping webpage:', error.message);
+    // console.error('Error scraping webpage:', error.message);
+    logger.error('Error scraping webpage:', error.message);
 
     // Store error in the MongoDB collection
     if (client) {
@@ -69,7 +72,8 @@ export async function scrapeWebpage(url: string) {
         error: error.message,
         occurredAt: new Date()
       });
-      console.log('Error logged to database');
+      // console.log('Error logged to database');
+      logger.info('Error logged to database');
     }
   }
   finally {
