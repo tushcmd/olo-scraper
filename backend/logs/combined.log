@@ -28,3 +28,8 @@
 {"level":"info","message":"Browser and MongoDB client closed","service":"olo-scraper"}
 {"level":"info","message":"Data inserted with ID: 66c21ad7557b75a9de908956","service":"olo-scraper"}
 {"level":"info","message":"Browser and MongoDB client closed","service":"olo-scraper"}
+{"level":"error","message":"Error scraping webpage:","service":"olo-scraper"}
+{"level":"info","message":"Error logged to database","service":"olo-scraper"}
+{"level":"info","message":"Browser and MongoDB client closed","service":"olo-scraper"}
+{"level":"info","message":"Data inserted with ID: 66c233c97a41a55581ac3674","service":"olo-scraper"}
+{"level":"info","message":"Browser and MongoDB client closed","service":"olo-scraper"}
