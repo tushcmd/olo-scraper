@@ -2,12 +2,13 @@ import express, { Request, Response } from 'express';
 import { scrapeWebpage } from "./scraper";
 import cors from 'cors';
 import { PORT } from "./config";
+import { FRONTEND_URL } from "./config";
 
 const app = express();
 
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: FRONTEND_URL,
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowedHeaders: ['Content-Type'],
     })

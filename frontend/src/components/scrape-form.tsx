@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { Link, Loader2 } from "lucide-react";
 
+
 interface ScrapedData {
     url: string;
     title: string;

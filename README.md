@@ -37,45 +37,38 @@ This is a full-stack web scraping application that simulates browser-like intera
 
 ## Getting Started
 
-1. Clone the repository:
+### 1.Clone the repository
 
-   ``` bash
-   git clone https://github.com/tushcmd/olo-scraper.git
+    ```bash 
+    git clone https://github.com/tushcmd/olo-scraper.git
     ```
 
-2. Install dependencies:
+### 2.Install dependencies
 
- ```bash
-    cd olo-scraper
+     ```sh
+    cd olo-scraper'
+    # then
     cd backend
     npm install
     cd frontend
     npm install
-```
-
-3. Set up environment variables:
-
-    ```bash
-    Copy the `.env.example` file into a `.env` file, edit it with all the necessary environment variables.
     ```
 
-4. In separate terminals start the backend server and frontend development server
+### 3. Set up environment variables
 
-   ```bash
-   npm run dev
+    Copy the `.env.example` file into a `.env` file, edit it with all the necessary environment variables.
 
-```
+### 4. In separate terminals start the backend server and frontend development server
 
-Open http://localhost:5173 (or the port specified by your React setup) with your browser to see the result.
+    ```sh
+    npm run dev
+    ```
+
+Open <http://localhost:5173> (or the port specified by your React setup) with your browser to see the result.
 
 ## Usage
+
 1. Enter a URL in the input field
 2. Select desired interactions from the dropdown
 3. Click "Scrape and Interact" to start the process
 4. View the results displayed on the page
-
-<!-- ## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
- 
-## License
-This project is licensed under the MIT License. -->
