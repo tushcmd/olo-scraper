@@ -80,6 +80,7 @@ export async function scrapeWebpage(url: string) {
     // close the browser and client
     if (browser) await browser.close();
     if (client) await client.close();
+    logger.info('Browser and MongoDB client closed');
   }
 }
 
