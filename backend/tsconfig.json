@@ -1,7 +1,12 @@
-
 {
     "compilerOptions": {
-        "lib": ["es5", "es6", "dom"],
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": [
+            "es5",
+            "es6",
+            "dom"
+        ],
         "outDir": "./dist",
         "rootDir": "./",
         "sourceMap": true,
@@ -16,5 +21,6 @@
         "node_modules"
     ],
     "include": [
-        "./"]
+        "./"
+    ]
 }
